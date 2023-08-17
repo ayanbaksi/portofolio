@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+.dark {
+    background-color: rgb(13, 13, 13);
+    color: white;
+  }
+  @font-face {
+    font-family: 'Burtons'; /* This is the font family name you'll use */
+    src: url('../assets/Burtons.otf') format('opentype'); /* Path to your font file */
+    /* You can also include font-weight and font-style if needed */
+  }
+  
+body {
+  font-family: 'Dancing Script', cursive;
+}
+
+/* src/index.css */
+.glow-dark {
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s, color 0.2s;
+  }
+  
+  .glow-dark::before {
+    content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
+    border-radius: inherit;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    transition: opacity 0.2s;
+  }
+  
+  .glow-dark:hover {
+    transform:scale(1.2);
+    
+    
+    text-shadow: #ffffff;
+  }
+  .glow-white:hover {
+    transform: scale(1.05);
+    color: #070707; /* Adjust the color to match your design */
+    
+    text-shadow: #ffffff;
+  }
+  
+  .glow-dark:hover::before {
+    opacity: 1;
+  }
+  .scrollable-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem;
+    z-index: 1000; /* Adjust as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .scrollable-content {
+    margin-top: 64px; /* Height of the header */
+  }
+
+  .spoiler {
+  color: transparent;
+  background-position: right;
+  background-size: 100% 100%;
+  background-image: linear-gradient(#a0aec0, #a0aec0);
+  display: inline;
+  background-repeat: no-repeat;
+  transition: all 500ms ease-in-out;
+}
+.spoilerr {
+  color: transparent;
+  background-position: right;
+  background-size: 100% 100%;
+  background-image: linear-gradient(#a0aec0, #a0aec0);
+  display: inline;
+  background-repeat: no-repeat;
+  transition: all 500ms ease-in-out;
+}
+.spoiler:hover {
+  color: #ffffff;
+  background-size: 0% 100%;
+}
+.spoilerr:hover {
+  color: #000000;
+  background-size: 0% 100%;
+}
+.amar_nam {
+  margin: 0;
+  padding-bottom: 6rem;
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+  font-family: 'Teko', sans-serif;
+  font-size: 10rem;
+  text-transform: uppercase;
+  animation: glow 2s ease-in-out infinite alternate;
+  text-align: center;
+  
+}
+a {
+  font-family: 'Teko', sans-serif;
+  color: #4db1bc;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  justify-self: center;
+  padding-bottom: 1rem;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #2d9da9;
+  }
+  to {
+    text-shadow: 0 0 30px #34b3c1, 0 0 10px #4dbbc7;
+  }
+}
+
